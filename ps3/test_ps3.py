@@ -3,6 +3,19 @@ from ps3 import *
 #
 # Test code
 #
+def test_substitute_hand():
+    new_hand = substitute_hand({'h':1, 'e':1, 'l':2, 'o':1}, 'l')
+    if(calculate_handlen(hand) == 7):
+        print("SUCCESS: test_calculate_handlen()")
+    else:
+        print("FAILURE: test_calculate_handlen()")
+
+def test_calculate_handlen():
+    hand = {'a':1, 'q':1, 'l':2, 'm':1, 'u':1, 'i':1}
+    if(calculate_handlen(hand) == 7):
+        print("SUCCESS: test_calculate_handlen()")
+    else:
+        print("FAILURE: test_calculate_handlen()")
 
 def test_get_word_score():
     """
@@ -261,4 +274,7 @@ test_is_valid_word(word_list)
 print("----------------------------------------------------------------------")
 print("Testing wildcards...")
 test_wildcard(word_list)
+print("----------------------------------------------------------------------")
+print("Testing calculate_handlen...")
+test_calculate_handlen()
 print("All done!")
